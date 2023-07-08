@@ -1,0 +1,53 @@
+<h1>Formulario de Alumnos</h1>
+
+<form accept-charset="UTF-8">
+
+  <label for="id">student_id:</label>
+  <input type="text" id="id" name="id" [(ngModel)]="alumno.student_id">
+  <br>
+
+  <label for="nombre">first_name:</label>
+  <input type="text" id="nombre" name="nombre" [(ngModel)]="alumno.first_name">
+  <br>
+
+  <label for="edad">last_name:</label>
+  <input type="text" id="apellido" name="apellido" [(ngModel)]="alumno.last_name">
+  <br>
+
+  <label for="direccion">grupo_id:</label>
+  <input type="text" id="grupo_id" name="grupo_id" [(ngModel)]="alumno.grupo_id">
+  <br>
+
+  <label for="direccion">año_de_ingreso:</label>
+  <input type="text" id="ingreso" name="ingreso" [(ngModel)]="alumno.ingreso">
+  <br>
+
+  <button type="button" (click)="mostrarAlumnos()">Mostrar Todo</button>
+  <button type="button" (click)="crearAlumno()">Crear</button>
+  <button type="button" (click)="actualizarAlumno()">Actualizar</button>
+  <button type="button" (click)="eliminarAlumno()">Eliminar</button>
+</form>
+
+<h2 class="alumnos-heading">Alumnos:</h2>
+
+
+<table class="excel-table">
+  <thead>
+    <tr>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>student ID</th>
+      <th>Grupo ID</th>
+      <th>Año de Ingreso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{ alumno.first_name }}</td>
+      <td>{{ alumno.last_name }}</td>
+      <td>{{ alumno.student_id }}</td>
+      <td>{{ alumno.grupo_id }}</td>
+      <td>{{ alumno.ingreso }}</td>
+    </tr>
+  </tbody>
+</table>

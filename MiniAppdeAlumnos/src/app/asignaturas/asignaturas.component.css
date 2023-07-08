@@ -1,0 +1,225 @@
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-container {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 12%;
+    box-sizing: border-box;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 18%;
+    margin-bottom: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .result-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .result-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .result-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .result-container li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .result-container li:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .result-container li:hover {
+    background-color: #e9e9e9;
+    cursor: pointer;
+  }
+  
+  .table-excel {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-excel th,
+  .table-excel td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .table-excel th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .table-excel tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-excel tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .table-excel td:hover {
+    cursor: pointer;
+  }
+  
+  .table-excel th:first-child,
+  .table-excel td:first-child {
+    border-left: none;
+  }
+  
+  .table-excel th:last-child,
+  .table-excel td:last-child {
+    border-right: none;
+  }
+  
+  .table-excel td {
+    width: 25%;
+  }
+  
+  /* Colores personalizados para las tablas */
+  .table-excel {
+    background-color: #fff;
+  }
+  
+  .table-excel th {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .table-excel tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-excel tr:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .table-excel td:hover {
+    background-color: #dcdcdc;
+  }
+  
+  .table-excel th:first-child,
+  .table-excel td:first-child {
+    border-left: none;
+  }
+  
+  .table-excel th:last-child,
+  .table-excel td:last-child {
+    border-right: none;
+  }
+  
+  .table-excel td {
+    width: 25%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    form {
+      width: 100%;
+    }
+  
+    input[type="text"] {
+      width: 40%;
+    }
+  
+    button {
+      width: 50%;
+      margin-top: 10px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .table-excel td {
+      display: block;
+      width: 100%;
+    }
+  
+    .table-excel td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  

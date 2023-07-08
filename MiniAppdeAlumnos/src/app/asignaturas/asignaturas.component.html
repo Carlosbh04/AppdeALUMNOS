@@ -1,0 +1,61 @@
+<h2>Nota Media</h2>
+<input type="text" [(ngModel)]="studentId" placeholder="ID del estudiante">
+<button (click)="obtenerNotaMedia()">Obtener Nota Media</button>
+
+<table class="table-excel">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Nota Media</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ nombre }}</td>
+      <td>{{ apellido }}</td>
+      <td>{{ notaMedia }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Asignaturas Apuntadas de los Alumnos</h2>
+<input type="text" [(ngModel)]="studentId" placeholder="ID del estudiante">
+<button (click)="obtenerAsignaturasApuntadas()">Apuntadas</button>
+<table class="table-excel">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Asignaturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asignatura of asignaturasApuntadas">
+      <td>{{ asignatura.nombre}}</td>
+      <td>{{ asignatura.apellido }}</td>
+      <td>{{ asignatura.asignatura }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Asignaturas que Imparten los Profesores</h2>
+<input type="text" [(ngModel)]="teacherId" placeholder="ID del profesor">
+<button (click)="obtenerAsignaturasImpartidas()">Obtener Asignaturas Impartidas</button>
+<table class="table-excel">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Asignaturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asignatura of asignaturasImpartidas">
+      <td>{{ asignatura.nombre  }}</td>
+      <td>{{ asignatura.apellido}}</td>
+      <td>{{ asignatura.asignatura }}</td>
+    </tr>
+  </tbody>
+</table>

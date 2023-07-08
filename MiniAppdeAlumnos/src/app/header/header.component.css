@@ -1,0 +1,43 @@
+/* Estilos para el header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Estilos para el título */
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  /* Estilos para la navegación */
+  nav {
+    display: flex;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
+  
+  /* Agregar una transición suave al título */
+  h1 {
+    transition: color 0.3s ease;
+  }
+  
+  /* Cambiar el color del título al hacer hover en los enlaces */
+  nav a:hover ~ h1 {
+    color: #ddd;
+  }
+  
